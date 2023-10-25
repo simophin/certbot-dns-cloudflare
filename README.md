@@ -4,7 +4,8 @@
 
 ```bash
 $ docker run -it \
-    -v "CERT_DIR:/certs" \
+    -v "YOUR_CERTS_DIR:/certs" \
+    -v "YOUR_LETSENCRYPT_DIR:/etc/letsencrypt" \
     -e DOMAINS=example.com \
     -e TZ=Australia/Melbourne \
     -e EMAIL=webmaster@example.com \
@@ -18,6 +19,7 @@ $ docker run -it \
 
 Certs will be generated and copied to `/certs` directory. 
 
+You should also mount a volume to `/etc/letsencrypt` to persist the certbot state.
 
 ## The environment variables
 

@@ -16,3 +16,4 @@ CMD ["/entrypoint.sh"]
 ENTRYPOINT ["/bin/sh"]
 
 VOLUME /certs
+VOLUME /etc/letsencrypt
