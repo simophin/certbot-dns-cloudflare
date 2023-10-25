@@ -15,4 +15,4 @@ ENV TEST_ONLY=true
 CMD ["/entrypoint.sh"]
 ENTRYPOINT ["/bin/sh"]
 
-VOLUME /etc/letsencrypt/live
+VOLUME /certs

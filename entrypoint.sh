@@ -40,5 +40,5 @@ if [ "$TEST_ONLY" = "true" ]; then
   TEST_ONLY_ARGS="--test-cert"
 fi
 
-cron-run -r -s "$CRON" -- certbot -n $TEST_ONLY_ARGS certonly --dns-cloudflare --dns-cloudflare-credentials credentials.ini \
-    -d $DOMAINS --agree-tos --email $EMAIL
+cron-run -r -s "$CRON" -- sh -c "certbot -n $TEST_ONLY_ARGS certonly --dns-cloudflare --dns-cloudflare-credentials credentials.ini \
+    -d $DOMAINS --agree-tos --email $EMAIL && cp -rvL /etc/letsencrypt/live/* /certs/"
