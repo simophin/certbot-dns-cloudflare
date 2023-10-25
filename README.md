@@ -18,6 +18,7 @@ $ docker run -it \
 The table below list available environment variables
 
 | Name | Description | Example |
+| ---- | ----------- | ------- |
 | DOMAIN | **Required**. Domain name(s) to obtain the certificate for. Separated by comma | example.com,mydomain.net |
 | TZ | **Required**. Timezone of the cron expression | Australia/Melbourne |
 | EMAIL | **Required**. Email address to register with letsencrypt | webmaster@example.com |
